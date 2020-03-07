@@ -74,6 +74,10 @@ type session struct {
 	writer  http.ResponseWriter
 }
 
+func (s *session) SessionId() string {
+	return s.Session().ID
+}
+
 func (s *session) Get(key interface{}) interface{} {
 	return s.Session().Values[key]
 }
