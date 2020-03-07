@@ -22,6 +22,7 @@ type Store interface {
 // Wraps thinly gorilla-session methods.
 // Session stores the values and optional configuration for a session.
 type Session interface {
+	SessionId() string
 	// Get returns the session value associated to the given key.
 	Get(key interface{}) interface{}
 	// Set sets the session value associated to the given key.
